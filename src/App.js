@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./App.css";
 
 function App() {
   const [email, setEmail] = useState("");
@@ -28,40 +29,41 @@ function App() {
     setDate("");
   };
 
+  const handleClearBookings = () => {
+    if (window.confirm("Biztosan törölni szeretnéd az összes foglalást?")) {
+      localStorage.removeItem("bookings");
+      setBookings([]);
+    }
+  };
+
   return (
-    <div style={styles.container}>
+    <div className="container">
       <h1>Vendégház Foglalás</h1>
 
-      <form onSubmit={handleBooking} style={styles.form}>
+      <form onSubmit={handleBooking} className="form">
         <input
           type="email"
           placeholder="Email cím"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          style={styles.input}
+          className="input"
           required
         />
         <input
           type="date"
           value={date}
           onChange={(e) => setDate(e.target.value)}
-          style={styles.input}
+          className="input"
           required
         />
-        <button type="submit" style={styles.button}>
+        <button type="submit" className="button">
           Foglalás
         </button>
       </form>
 
-      <button onClick={() => {
-  if (window.confirm("Biztosan törölni szeretnéd az összes foglalást?")) {
-    localStorage.removeItem("bookings");
-    setBookings([]);
-  }
-}} style={{ ...styles.button, backgroundColor: "red" }}>
-  Összes foglalás törlése
-</button>
-
+      <button onClick={handleClearBookings} className="button delete-button">
+        Összes foglalás törlése
+      </button>
 
       <h2>Foglalások:</h2>
       <ul>
@@ -74,33 +76,5 @@ function App() {
     </div>
   );
 }
-
-const styles = {
-  container: {
-    fontFamily: "Arial, sans-serif",
-    maxWidth: "500px",
-    margin: "0 auto",
-    padding: "20px",
-    textAlign: "center",
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "10px",
-    marginBottom: "20px",
-  },
-  input: {
-    padding: "10px",
-    fontSize: "16px",
-  },
-  button: {
-    padding: "10px",
-    backgroundColor: "#4CAF50",
-    color: "white",
-    border: "none",
-    fontSize: "16px",
-    cursor: "pointer",
-  },
-};
 
 export default App;
