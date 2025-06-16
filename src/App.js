@@ -53,6 +53,16 @@ function App() {
         </button>
       </form>
 
+      <button onClick={() => {
+  if (window.confirm("Biztosan törölni szeretnéd az összes foglalást?")) {
+    localStorage.removeItem("bookings");
+    setBookings([]);
+  }
+}} style={{ ...styles.button, backgroundColor: "red" }}>
+  Összes foglalás törlése
+</button>
+
+
       <h2>Foglalások:</h2>
       <ul>
         {bookings.map((booking, index) => (
