@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/foglalas/static/css/main.e6c13ad2.css",
-    "main.js": "/foglalas/static/js/main.56cf3fd4.js",
+    "main.css": "/foglalas/static/css/main.fdd48fb2.css",
+    "main.js": "/foglalas/static/js/main.0eea0f21.js",
     "static/js/453.9812fa62.chunk.js": "/foglalas/static/js/453.9812fa62.chunk.js",
     "index.html": "/foglalas/index.html",
-    "main.e6c13ad2.css.map": "/foglalas/static/css/main.e6c13ad2.css.map",
-    "main.56cf3fd4.js.map": "/foglalas/static/js/main.56cf3fd4.js.map",
+    "main.fdd48fb2.css.map": "/foglalas/static/css/main.fdd48fb2.css.map",
+    "main.0eea0f21.js.map": "/foglalas/static/js/main.0eea0f21.js.map",
     "453.9812fa62.chunk.js.map": "/foglalas/static/js/453.9812fa62.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.56cf3fd4.js"
+    "static/css/main.fdd48fb2.css",
+    "static/js/main.0eea0f21.js"
   ]
 }
