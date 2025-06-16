@@ -1,9 +1,19 @@
+.background {
+  background-image: url("../public/hotel-1749602_1920.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* hogy teljes magasságú legyen */
+  color: white; /* háttérképhez igazodva */
+}
+
 .container {
   font-family: Arial, sans-serif;
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
+  background-color: rgba(255,255,255,.2);
 }
 
 .form {
@@ -39,4 +49,11 @@
 
 .delete-button:hover {
   background-color: darkred;
+}
+
+ul li {
+  text-align: left;
+  list-style-type: none;
+  background-color: rgba(233,233,233,.5);
+  padding: .5rem;
 }

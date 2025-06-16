@@ -37,8 +37,9 @@ function App() {
   };
 
   return (
+    <div className="background">
     <div className="container">
-      <h1>Vendégház Foglalás</h1>
+      <h1>Vendégház foglalás</h1>
 
       <form onSubmit={handleBooking} className="form">
         <input
@@ -73,6 +74,7 @@ function App() {
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }
